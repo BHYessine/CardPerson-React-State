@@ -5,7 +5,7 @@ class App extends React.Component {
   state = {
     Person : {
       fullName:"Yessine Ben Hlima",
-      bio:"30 years",
+      bio:"30",
       imgSrc:"./profilePhoto.jpg",
       profession:"Engineer"},
     show: false,    
@@ -28,7 +28,7 @@ class App extends React.Component {
               <div className="card">
                 <img src={this.state.Person.imgSrc} width="120px" height="120px" alt=""/>
                 <div className="person">My name is {this.state.Person.fullName}</div>
-                <div className="person">I`m {this.state.Person.bio} old</div>
+                <div className="person">I`m {this.state.Person.bio} years old</div>
                 <div className="person">I`m an {this.state.Person.profession}</div>                
               </div>                           
               ):(<h2>Click to show the profile!!</h2>) 
