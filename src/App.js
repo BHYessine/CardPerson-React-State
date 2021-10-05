@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Time from './Time.js';
 
 class App extends React.Component {
   state = {
@@ -8,8 +9,7 @@ class App extends React.Component {
       bio:"30",
       imgSrc:"./profilePhoto.jpg",
       profession:"Engineer"},
-    show: false, 
-    digit: 0
+    show: false,
   };
 
   handleClick=()=>{
@@ -17,17 +17,6 @@ class App extends React.Component {
       show: !this.state.show}
       )
     };
-componentDidMount = () => {
- this.myTimer = setInterval(() => {
-   this.setState((prevState) => ({
-     digit: prevState.digit + 1
-   }));
-}, 1000);
-};
-
-  componentWillUnmount = () => {
-    clearInterval(this.myTimer);
-  }
       
   render(){
         return (
@@ -39,9 +28,10 @@ componentDidMount = () => {
                 <img src={this.state.Person.imgSrc} width="120px" height="120px" alt=""/>
                 <div className="person">My name is {this.state.Person.fullName}</div>
                 <div className="person">I`m {this.state.Person.bio} years old</div>
-                <div className="person">I`m an {this.state.Person.profession}</div>                
+                <div className="person">I`m an {this.state.Person.profession}</div>  
+                <Time/>
               </div>   
-             <p> Counter : {digit} </p>
+             
               ):(<h2>Click to show the profile!!</h2>) 
             }  
                           
