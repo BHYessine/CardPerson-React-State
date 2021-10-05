@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Time from './Time.js';
+import Time from './Component/Time';
 
 class App extends React.Component {
   state = {
