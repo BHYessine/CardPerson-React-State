@@ -24,7 +24,10 @@ componentDidMount = () => {
    }));
 }, 1000);
 };
-      
+
+  componentWillUnmount = () => {
+    clearInterval(this.myTimer);
+  }
       
   render(){
         return (
