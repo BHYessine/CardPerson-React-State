@@ -16,7 +16,7 @@ componentDidMount = () => {
    }
    render(){
     return (
-      <div> Counter : {this.state.digit} </div> 
+      <div className="counter"> Counter : {this.state.digit} </div> 
     );}
   }
 
