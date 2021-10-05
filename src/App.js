@@ -8,7 +8,8 @@ class App extends React.Component {
       bio:"30",
       imgSrc:"./profilePhoto.jpg",
       profession:"Engineer"},
-    show: false,    
+    show: false, 
+    digit: 0
   };
 
   handleClick=()=>{
@@ -16,7 +17,13 @@ class App extends React.Component {
       show: !this.state.show}
       )
     };
-
+componentDidMount = () => {
+ this.myTimer = setInterval(() => {
+   this.setState((prevState) => ({
+     digit: prevState.digit + 1
+   }));
+}, 1000);
+};
       
       
   render(){
@@ -30,7 +37,8 @@ class App extends React.Component {
                 <div className="person">My name is {this.state.Person.fullName}</div>
                 <div className="person">I`m {this.state.Person.bio} years old</div>
                 <div className="person">I`m an {this.state.Person.profession}</div>                
-              </div>                           
+              </div>   
+             <p> Counter : {digit} </p>
               ):(<h2>Click to show the profile!!</h2>) 
             }  
                           
