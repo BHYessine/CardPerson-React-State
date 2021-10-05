@@ -16,7 +16,7 @@ componentDidMount = () => {
    }
    render(){
     return (
-      <div className="counter"> Counter : {this.state.digit} </div> 
+      <div className="counter"> Time Shows : {this.state.digit}s </div> 
     );}
   }
 
