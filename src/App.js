@@ -7,8 +7,8 @@ class App extends React.Component {
     Person : {
       fullName:"Yessine Ben Hlima",
       bio:"30",
-      imgSrc:"./profilePhoto.jpg",
-      profession:"Engineer"},
+      imgSrc:"./user.png",
+      profession:"Web Developer"},
     show: false,
   };
 
