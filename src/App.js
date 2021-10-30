@@ -26,9 +26,9 @@ class App extends React.Component {
             { this.state.show ? (
               <div className="card">
                 <img src={this.state.Person.imgSrc} width="120px" height="120px" alt=""/>
-                <div className="person">My name is {this.state.Person.fullName}</div>
+                <div className="person">Full Name: {this.state.Person.fullName}</div>
                 <div className="person">I`m {this.state.Person.bio} years old</div>
-                <div className="person">I`m an {this.state.Person.profession}</div>  
+                <div className="person">Profession: {this.state.Person.profession}</div>  
                 <Time/>
               </div>   
              
